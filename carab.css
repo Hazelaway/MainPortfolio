@@ -1,0 +1,624 @@
+/* carab.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+}
+
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    background: url('assets/bg-universe.mp4') no-repeat center center;
+}
+
+.close-to-previous {
+    margin-top: -90vh; /* Ajusta este valor según sea necesario */
+}
+
+.scroll-section-group {
+    position: relative;
+    top: -20vh; /* Ajusta este valor para mover el bloque hacia arriba */
+}
+
+.scroll-section-group .close-to-previous {
+    margin-top: -98vh; /* Mantén este valor como estaba originalmente */
+}
+
+.scroll-section-group2 {
+    position: relative;
+    top: 5vh; /* Ajusta este valor para mover el bloque hacia arriba */
+}
+
+.scroll-section-group2 .scroll-section p {
+    font-size: 2.5em; /* Ajusta el tamaño como un h1 */
+    font-weight: bold; /* Similar a h1 */
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin: 0;
+    opacity: 0; /* Asegura que la animación funcione */
+}
+
+.scroll-section-group2 .close-to-previous {
+    margin-top: -98vh; /* Mantén este valor como estaba originalmente */
+}
+
+.scroll-section.appear-from-top p {
+    font-size: 2.5em; /* Ajusta el tamaño de la fuente */
+    font-weight: bold; /* Ajusta el grosor de la fuente */
+    color: white; /* Cambia el color del texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Añade sombra al texto */
+    margin: 0; /* Elimina márgenes */
+    line-height: 1.2; /* Ajusta la altura de línea */
+    opacity: 0; /* Asegura que la animación funcione */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    letter-spacing: 1px; /* Añade espaciado entre letras */
+    margin-top: 260px;
+}
+
+.image-text-container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    z-index: 1;
+}
+
+.profile-image {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 0;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#scroll-text {
+    opacity: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    view-timeline-name: --reveal;
+    view-timeline-axis: block;
+}
+
+.scroll-section p {
+    font-size: 2em;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    opacity: 0;
+    animation: fade-in linear both;
+    animation-timeline: --reveal;
+    animation-range: entry 25% cover 50%;
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.appear-from-left p {
+    animation-name: fade-in, slide-from-left-desktop;
+}
+
+.appear-from-right p {
+    animation-name: fade-in, slide-from-right-desktop;
+    font-weight: bold;
+    font-size: 6rem;
+}
+
+.appear-from-bottom p {
+    animation-name: fade-in, slide-from-bottom;
+}
+
+.appear-from-top p {
+    animation-name: fade-in, slide-from-top;
+}
+
+@keyframes slide-from-left-desktop {
+    from { transform: translateX(-300px); }
+    to { transform: translateX(0); }
+}
+
+@keyframes slide-from-right-desktop {
+    from { transform: translateX(300px); }
+    to { transform: translateX(0); }
+}
+
+@keyframes slide-from-bottom {
+    from { transform: translateY(100px); }
+    to { transform: translateY(0); }
+}
+
+@keyframes slide-from-top {
+    from { transform: translateY(-100px); }
+    to { transform: translateY(0); }
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .image-text-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        text-align: center;
+    }
+
+    .profile-image {
+        width: 80%;
+        max-width: 200px;
+        margin-bottom: 20px;
+    }
+
+    .travel-title {
+        font-size: 3.4em !important;; /* Ajusta el tamaño según sea necesario */
+    }
+
+    .text-container h1 {
+        font-size: 3em;
+        margin: 0;
+    }
+
+    #scroll-text {
+        font-size: 1.5em;
+    }
+
+    .scroll-section p {
+        font-size: 2em;
+    }
+
+    .appear-from-left p {
+        animation-name: fade-in, slide-from-left-mobile;
+    }
+
+    .appear-from-right p {
+        animation-name: fade-in, slide-from-right-mobile;
+    }
+
+    @keyframes slide-from-left-mobile {
+        from { transform: translateX(-100px); }
+        to { transform: translateX(0); }
+    }
+
+    @keyframes slide-from-right-mobile {
+        from { transform: translateX(100px); }
+        to { transform: translateX(0); }
+    }
+}
+
+/* CAROUSEL */
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-top: -50vh;
+  }
+  
+  .carousel-wrapper {
+    display: flex;
+    width: calc(300px * 16); /* 16 es el número total de imágenes (8 originales + 8 duplicadas) */
+    animation: slide 40s infinite linear; /* Aumentamos la duración para un movimiento más suave */
+  }
+  
+  .carousel-item {
+    flex: 0 0 300px; /* Cambiamos a flex-shrink: 0 para prevenir que las imágenes se compriman */
+    box-sizing: border-box;
+  }
+  
+  .carousel-item img {
+    width: 300px;
+    height: 200px;
+    object-fit: contain;
+    display: block;
+  }
+  
+  .carousel-title {
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    margin-top: 10px;
+  }
+  
+  @keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-300px * 8)); } /* Movemos exactamente la mitad del ancho total */
+  }
+  
+  /* Ajustes para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .carousel-wrapper {
+      width: calc(300px * 16); /* Mantenemos el mismo ancho que en pantallas grandes */
+    }
+    
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(calc(-300px * 8)); } /* Mantenemos el mismo movimiento */
+    }
+  }
+  
+  
+  
+  /* CARROUSEL 2 PELICULAS*/
+
+  .carousel2 {
+    position: relative;
+    width: 300px; /* Ancho del carrusel */
+    height: 500px; /* Alto del carrusel */
+    margin: auto;
+    margin-top: -350px;
+    overflow: hidden;
+}
+
+.carousel-inner2 {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item2 {
+    flex: 0 0 300px; /* Ancho de cada ítem */
+    height: 100%; /* Ajusta la altura al contenedor */
+}
+
+.carousel-item2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin distorsión */
+    display: block;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 20px;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+
+/* TARJETAS 3D*/
+
+/* Estilo general para el contenedor de tarjetas */
+.card-container {
+    perspective: 1000px; /* Añade perspectiva para el efecto 3D */
+    width: 300px; /* Ajusta según sea necesario */
+    height: 500px; /* Ajusta según sea necesario para hacer vertical la tarjeta */
+    border-radius: 10px; /* Bordes redondeados opcional */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    margin-top: 40px; /* Ajusta para la separación entre el título y la tarjeta */
+}
+
+.new-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido horizontalmente */
+    text-align: center; /* Asegura que el texto esté centrado */
+    margin-top: 80px; /* Separación desde la sección anterior */
+    padding-top: 300px; /* Ajusta el padding superior para darle espacio al título */
+}
+
+.section-title {
+    font-size: 2em; /* Tamaño del título */
+    text-align: center; /* Asegura que el texto esté centrado */
+}
+
+/* Estilo para el cuerpo de la tarjeta */
+.card-body {
+    transform-style: preserve-3d; /* Mantiene la perspectiva 3D */
+    transition: transform 0.5s; /* Transición para efectos de hover */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transform: rotateY(0deg); /* Ajusta el ángulo de rotación 3D si es necesario */
+}
+
+/* Efecto de rotación 3D en hover */
+.card-container:hover .card-body {
+    transform: rotateY(15deg); /* Efecto de rotación 3D en hover */
+}
+
+/* Estilo para el título de la tarjeta */
+.card-title {
+    font-size: 1.5em; /* Tamaño del texto */
+    padding: 10px;
+    text-align: center;
+    background-color: #fff; /* Fondo del título */
+    border-bottom: 1px solid #ddd; /* Línea inferior opcional */
+}
+
+/* Estilo para la imagen de la tarjeta */
+.card-image {
+    flex: 1; /* Permite que el contenedor de la imagen ocupe el espacio restante */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ajuste de imagen dentro de la tarjeta */
+.card-image img {
+    width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    height: 100%; /* Ajusta la altura al contenedor */
+    object-fit: cover; /* Mantiene la proporción y cubre el contenedor */
+    display: block;
+}
+
+/* Estilos para la sección de los libros */
+.books-section {
+    display: flex;
+    justify-content: center; /* Centra los libros horizontalmente */
+    gap: 20px; /* Espacio entre los libros */
+    flex-wrap: wrap; /* Permite que los libros se ajusten en pantallas pequeñas */
+    margin: 40px 0; /* Espacio arriba y abajo de la sección */
+    margin-top: -250px;
+}
+
+.timeline-section .section-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--text-color, #ffffff);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .books-section {
+        flex-direction: column; /* Muestra los libros en columna en pantallas pequeñas */
+        align-items: center; /* Centra los libros verticalmente */
+    }
+
+    .card-container {
+        width: 90%; /* Ajusta el ancho de la tarjeta en pantallas móviles */
+        height: auto; /* Ajusta la altura de la tarjeta en pantallas móviles */
+        margin-bottom: 20px; /* Espacio entre las tarjetas en pantallas móviles */
+    }
+
+    .card-title {
+        font-size: 1.2em; /* Ajusta el tamaño del texto en pantallas móviles */
+    }
+
+    .card-image img {
+        height: auto; /* Ajusta la altura de la imagen en pantallas móviles */
+    }
+}
+
+/* Estilo para la nueva sección con una tarjeta 3D */
+.new-section {
+    margin: 40px 0; /* Espacio arriba y abajo de la sección */
+    text-align: center; /* Centra el texto en la nueva sección */
+    margin-top: -20px;
+    color: white;
+    
+}
+
+.section-title {
+    font-size: 2em; /* Tamaño del título de la sección */
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+
+/* ANIMACION DE APARICIÓN EN LOS CARRUSELES */
+
+.animated-element {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-in {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.fade-out {
+    opacity: 0 !important;
+    transform: translateY(50px) !important;
+}
+  
+
+/* TIMELINE */
+
+.timeline-section {
+    padding: 4rem 0;
+    position: relative;
+    margin-top: 350px;
+  }
+  
+  .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+    color: #ffffff;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #ffffff;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s ease;
+  }
+  
+  .timeline.animate::before {
+    transform: scaleY(1);
+  }
+  
+  .timeline-item {
+    padding: 10px 0px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .timeline-item:nth-child(odd) {
+    left: 0;
+  }
+  
+  .timeline-item:nth-child(even) {
+    left: 50%;
+  }
+  
+  .timeline-content {
+    padding: 20px 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    position: relative;
+    border-radius: 6px;
+  }
+  
+  .timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .timeline-item:nth-child(odd)::after {
+    right: -16px; /* Ajustado para centrar el punto en la línea */
+  }
+  
+  .timeline-item:nth-child(even)::after {
+    left: -16px; /* Ajustado para centrar el punto en la línea */
+  }
+  
+  .timeline-item.animate {
+    opacity: 1;
+  }
+  
+  .timeline-item.animate::after {
+    opacity: 1;
+  }
+  
+  .timeline-content h3 {
+    margin-top: 0;
+    color: #FF9F55;
+  }
+  
+  .timeline-content p {
+    margin-bottom: 0;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .timeline::before {
+      left: 31px;
+      height: 120vh;
+    }
+    
+    .timeline-item {
+      width: calc(100% - 40px);
+      padding-left: 70px;
+      padding-right: 25px;
+      margin-right: 15px;
+    }
+    
+    .timeline-item:nth-child(even) {
+      left: 0%;
+    }
+
+    /* Ajuste específico para los puntos de 2010 y 2022 */
+    .timeline-item:nth-child(2)::after,
+     .timeline-item:nth-child(4)::after {
+     left: 15px; /* Alinea estos puntos con la línea central */
+    }
+    
+    .timeline-item::after {
+      left: 15px;
+    }
+  }
+
+
+  /* SECCIÓN REDES SOCIALES */
+
+  .social-media-section {
+    text-align: center;
+    margin-top: 340px;
+}
+
+.social-media-icons {
+    list-style-type: none;
+    padding: 0;
+}
+
+.social-media-icons li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-media-icons img {
+    width: 40px;
+    height: 40px;
+}
+
+

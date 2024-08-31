@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Effect with Video Background</title>
+    <link rel="stylesheet" href="carab.css">
+</head>
+<body>
+    <video autoplay muted loop id="bg-video">
+        <source src="assets/bg-universe.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="overlay">
+        <div class="image-text-container">
+            <img src="assets/Antonio.jpg" alt="Antonio" class="profile-image">
+            <div class="text-container">
+                <h1 id="main-text" data-en="Beyond the Office" data-es="Más Allá de Trabajar">Beyond the Office</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+      <div class="scroll-section-group">
+        <section class="scroll-section appear-from-left">
+            <p data-en="MY ENGINE OF HAPPINESS:" data-es="MI MOTOR DE LA FELICIDAD:">MY ENGINE OF HAPPINESS:</p>
+        </section>
+    
+        <section class="scroll-section appear-from-right close-to-previous">
+            <p class="travel-title" data-en="T R A V E L" data-es="V I A J A R">T R A V E L</p>
+        </section>
+      </div>
+
+        <div class="carousel">
+            <div class="carousel-wrapper">
+              <div class="carousel-item">
+                <img src="assets/Islandia.jpg" alt="Slide 1">
+                <h3 class="carousel-title">Islandia</h3>
+              </div>
+              <div class="carousel-item">
+                <img src="assets/NewYork.jpg" alt="Slide 2">
+                <h3 class="carousel-title">New York</h3>
+              </div>
+              <div class="carousel-item">
+                <img src="assets/Noruega.jpg" alt="Slide 3">
+                <h3 class="carousel-title">Noruega</h3>
+              </div>
+              <div class="carousel-item">
+                <img src="assets/SanDiego.jpg" alt="Slide 4">
+                <h3 class="carousel-title">San Diego</h3>
+              </div>
+              <div class="carousel-item">
+                <img src="assets/Sahara.jpg" alt="Slide 5">
+                <h3 class="carousel-title">Sahara</h3>
+              </div>
+              <div class="carousel-item">
+                <img src="assets/Granada.jpg" alt="Slide 6">
+                <h3 class="carousel-title">Granada</h3>
+              </div>
+              <div class="carousel-item">
+                <img src="assets/Roma.jpg" alt="Slide 7">
+                <h3 class="carousel-title">Roma</h3>
+              </div>
+              <div class="carousel-item">
+                <img src="assets/Kyoto.jpg" alt="Slide 8">
+                <h3 class="carousel-title">Kyoto</h3>
+              </div>
+              <div class="carousel-item">
+                <img src="assets/Islandia.jpg" alt="Slide 1">
+                <h3 class="carousel-title">Islandia</h3>
+              </div>
+              <div class="carousel-item">
+                <img src="assets/NewYork.jpg" alt="Slide 2">
+                <h3 class="carousel-title">New York</h3>
+              </div>
+              <div class="carousel-item">
+                <img src="assets/Noruega.jpg" alt="Slide 3">
+                <h3 class="carousel-title">Noruega</h3>
+              </div>
+              <div class="carousel-item">
+                <img src="assets/SanDiego.jpg" alt="Slide 4">
+                <h3 class="carousel-title">San Diego</h3>
+              </div>
+              <div class="carousel-item">
+                <img src="assets/Sahara.jpg" alt="Slide 5">
+                <h3 class="carousel-title">Sahara</h3>
+              </div>
+              <div class="carousel-item">
+                <img src="assets/Granada.jpg" alt="Slide 6">
+                <h3 class="carousel-title">Granada</h3>
+              </div>
+              <div class="carousel-item">
+                <img src="assets/Roma.jpg" alt="Slide 7">
+                <h3 class="carousel-title">Roma</h3>
+              </div>
+              <div class="carousel-item">
+                <img src="assets/Kyoto.jpg" alt="Slide 8">
+                <h3 class="carousel-title">Kyoto</h3>
+              </div>
+            </div>
+          </div>
+          
+          <div class="scroll-section-group2">
+            <section class="scroll-section appear-from-left">
+                <p data-en="CULT CLASSICS (FOR ME):" data-es="CINE DE CULTO (PARA MÍ):">CULT CLASSICS (FOR ME):</p>
+            </section>
+        
+            <div class="carousel2">
+              <button class="prev">&#9664;</button>
+              <div class="carousel-inner2">
+                  <div class="carousel-item2"><img src="assets/interestellar.jpg" alt="Pelicula 1"></div>
+                  <div class="carousel-item2"><img src="assets/sandman.jpg" alt="Pelicula 2"></div>
+                  <div class="carousel-item2"><img src="assets/mitty.jpg" alt="Pelicula 3"></div>
+                  <div class="carousel-item2"><img src="assets/vengadores.jpg" alt="Pelicula 4"></div>
+                  <div class="carousel-item2"><img src="assets/midnight.jpg" alt="Pelicula 5"></div>
+                  <div class="carousel-item2"><img src="assets/braveheart.jpg" alt="Pelicula 6"></div>
+                  <div class="carousel-item2"><img src="assets/man.jpg" alt="Pelicula 7"></div>
+              </div>
+              <button class="next">&#9654;</button>
+          </div>
+      </div>
+    
+        <section class="scroll-section appear-from-top">
+          <p class="books-title" data-en="BOOKS:" data-es="LIBROS:">BOOKS:</p>
+        </section>
+
+
+        <div class="books-section">
+          <!-- Libro 1 -->
+          <div class="card-container">
+            <div class="card-body">
+              <div class="card-item card-title">
+                <span data-en="The Name Of The Wind" data-es="El Nombre del Viento">The Name Of The Wind</span>
+              </div>
+              <div class="card-item card-image">
+                <img src="assets/wind.jpg" alt="thumbnail">
+              </div>
+            </div>
+          </div>
+        
+          <!-- Libro 2 -->
+          <div class="card-container">
+            <div class="card-body">
+              <div class="card-item card-title">
+                <span data-en="The Martian" data-es="El Marciano">The Martian</span>
+              </div>
+              <div class="card-item card-image">
+                <img src="assets/themartian.jpg" alt="thumbnail">
+              </div>
+            </div>
+          </div>
+        
+          <!-- Libro 3 -->
+          <div class="card-container">
+            <div class="card-body">
+              <div class="card-item card-title">
+                <span data-en="The Little Prince" data-es="El Principito">The Little Prince</span>
+              </div>
+              <div class="card-item card-image">
+                <img src="assets/elprincipito.jpg" alt="thumbnail">
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Nueva sección con una tarjeta 3D -->
+        <div class="new-section">
+          <h2 class="section-title" data-en="And one more book (writen by me):" data-es="Y un libro más (escrito por mí):">And one more book (writen by me):</h2>
+          <div class="card-container">
+            <div class="card-body">
+              <div class="card-item card-image">
+                <a href="https://amzn.to/3XqE851" target="_blank">
+                <img src="assets/destino.jpg" alt="thumbnail">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </div>
+
+    <div class="timeline-section">
+      <h2 class="section-title" data-en="MY OTHER JOURNEY" data-es="MI OTRO VIAJE">MY OTHER JOURNEY</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>2001</h3>
+            <p data-en="The first day of university, the head of the Tourism program told us, "You will be apprentices of everything and masters of nothing," almost in a disdainful tone." data-es="El primer día de Universidad, el director de la carrera de Turismo nos dijo 'Seréis aprendices de todo y maestros de nada', casi con tono despectivo.">The first day of university, the head of the Tourism program told us, "You will be apprentices of everything and masters of nothing," almost in a disdainful tone.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>2005</h3>
+            <p data-en="I started working in the industry, and I quickly learned and gained a lot of experience." data-es="Empecé a trabajar en el sector, y rápidamente fui aprendiendo y ganando mucha experiencia.">I started working in the industry, and I quickly learned and gained a lot of experience.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>2010</h3>
+            <p data-en="From Málaga, I went to work in Tenerife. And being more 'isolated,' I started traveling more than ever and continued studying even more." data-es="Desde Málaga, me fui a trabajar a Tenerife. Y estando más 'aislado' empecé a viajar más que nunca. Y a seguir estudiando más.">From Málaga, I went to work in Tenerife. And being more 'isolated,' I started traveling more than ever and continued studying even more.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>2020</h3>
+            <p data-en="Global pandemic. Where was I? In Mexico, with a return flight through the U.S. (border closed). What was the epicenter of it all at that time? Madrid. Well, that's where I flew and had a layover (I still don’t know how). After that, about a year of introspection, reconnecting with nature, and new life projects." data-es="Pandemia Mundial. ¿Dónde estoy yo? En México, con vuelo de regreso vía EEUU (frontera cerrada). ¿Cuál era el epicentro de todo en ese momento? Madrid. Pues allí volé e hice escala (aún no se ni como). Después de eso alrededor de 1 año de introspección, contacto con la naturaleza y nuevos proyectos de vida.">Global pandemic. Where was I? In Mexico, with a return flight through the U.S. (border closed). What was the epicenter of it all at that time? Madrid. Well, that's where I flew and had a layover (I still don’t know how). After that, about a year of introspection, reconnecting with nature, and new life projects.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>2024</h3>
+            <p data-en="Jack of all trades, master of none. I learned and became a certified drone pilot, learned to kitesurf, obtained a C1 level in English, train 3-4 times a week, became an official EU Tourism guide, learned to code, and I’m fascinated by new technologies and the history of Egypt... I'm driven by curiosity and the desire to learn new things." data-es="Aprendiz de todo, maestro de nada. Aprendí y me hice piloto oficial de drones, aprendí a hacer kitesurfing, obtuve un C1 en inglés, entreno 3/4 veces por semana, me convertí en guía oficial de Turismo de la UE, aprendí a programar, me fascinan las nuevas tecnologías, la historia de Egipto...Me mueve la curiosidad por saber y aprender cosas nuevas.">Jack of all trades, master of none. I learned and became a certified drone pilot, learned to kitesurf, obtained a C1 level in English, train 3-4 times a week, became an official EU Tourism guide, learned to code, and I’m fascinated by new technologies and the history of Egypt... I'm driven by curiosity and the desire to learn new things.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <!-- Nueva sección de Redes Sociales -->
+    <div class="social-media-section">
+          <div class="social-media">
+              <a href="https://www.instagram.com/hazelaway/" target="_blank">
+                  <img src="assets/instagram.png" alt="Instagram">
+              </a>
+              <a href="https://www.youtube.com/@nivelaway" target="_blank">
+                  <img src="assets/youtube.png" alt="YouTube">
+              </a>
+    </div>
+
+
+    <script src="carruselpelis.js"></script>
+    <script src="animations.js"></script>
+</body>
+</html>
+
+
+
+
+

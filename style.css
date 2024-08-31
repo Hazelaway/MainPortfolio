@@ -1,0 +1,782 @@
+/* General */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: rgb(85, 85, 85);
+}
+
+/* Estilo para el tema oscuro */
+.dark-theme .section__pic-container img:hover {
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.8); /* Resplandor blanco */
+  transform: scale(1.05); /* Opcional: efecto de zoom */
+}
+
+/* Estilo para el tema claro */
+.light-theme .section__pic-container img:hover {
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.8); /* Resplandor negro */
+  transform: scale(1.05); /* Opcional: efecto de zoom */
+}
+
+/* Transiciones suaves para el cambio de resplandor */
+.section__pic-container img {
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Efecto de zoom para imágenes de proyectos */
+.project-img {
+  transition: transform 0.3s ease-in-out; /* Suaviza la transición del zoom */
+  cursor: pointer; /* Cambia el cursor a mano para indicar interactividad */
+}
+
+.project-img:hover {
+  transform: scale(1.1); /* Escala la imagen al 110% de su tamaño original */
+}
+
+/* DESKTOP NAV */
+nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  text-decoration-color: white;
+}
+
+a:hover {
+  color: grey;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+.logo:hover {
+  cursor: default;
+}
+
+/* HAMBURGER MENU */
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0;
+  z-index: 10;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-color);
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: var(--background-color);
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links.open {
+  max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+.hamburger-icon span:first-child {
+  opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+/* Variables para los temas */
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --button-border-color: rgb(53, 53, 53);
+  --button-bg-color: transparent;
+  --button-text-color: rgb(53, 53, 53);
+  --button-hover-bg-color: rgb(53, 53, 53);
+  --button-hover-text-color: #ffffff;
+}
+
+body.dark-theme {
+  --background-color: #000000;
+  --text-color: #ffffff;
+  --button-border-color: #ffffff;
+  --button-bg-color: transparent;
+  --button-text-color: #ffffff;
+  --button-hover-bg-color: #ffffff;
+  --button-hover-text-color: #000000;
+}
+
+body.dark-theme {
+  --background-color: #000000;
+  --text-color: #ffffff;
+}
+
+/* Aplicar variables a los elementos */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+a, .btn {
+  color: var(--text-color);
+}
+
+.hamburger-icon span {
+  background-color: var(--text-color);
+}
+
+.menu-links {
+  background-color: var(--background-color);
+}
+
+.menu-links a {
+  color: var(--text-color);
+}
+
+/* Tamaño y configuración básica del logo */
+.logo {
+  width: 400px;  /* Ajusta según el tamaño necesario */
+  height: 400px;  /* Ajusta según el tamaño necesario */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Logo para el tema oscuro */
+body.dark-theme .logo {
+  background-image: url('assets/firmablanca.png');
+}
+
+/* Logo para el tema claro */
+body.light-theme .logo {
+  background-image: url('assets/firmanegra.png');
+}
+
+/* Ocultar todos los logos por defecto en móviles */
+@media (max-width: 768px) {
+  .logo {
+    display: none;
+    width: 200px;
+  }
+
+  /* Mostrar el logo correcto según el tema en móviles */
+  body.dark-theme .logo {
+    display: block;
+    background-image: url('assets/firmablanca.png');
+  }
+
+  body.light-theme .logo {
+    display: block;
+    background-image: url('assets/firmanegra.png');
+  }
+}
+
+/* SECTIONS */
+section {
+  padding-top: 4vh;
+  height: 96vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+.section-container {
+  display: flex;
+}
+
+/* PROFILE SECTION */
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+}
+
+.section__pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+.section__pic-container img {
+  border-radius: 50%;
+}
+
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+
+.section__text p {
+  font-weight: 600;
+}
+
+.section__text__p1 {
+  text-align: center;
+}
+
+.section__text__p2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+#socials-container .icon {
+  width: 2.5rem; /* Ajusta el tamaño de los iconos a 2.5rem */
+  height: 2.5rem; /* Ajusta la altura de los iconos a 2.5rem */
+  transition: filter 0.3s ease;
+  cursor: pointer;
+}
+
+/* Ajustes específicos para el tema oscuro */
+body.dark-theme #socials-container .icon {
+  filter: brightness(0) invert(1); /* Ajusta el brillo e inversión para el tema oscuro */
+}
+
+/* ICONS */
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+#translate-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#flag-image {
+  width: 24px; /* Ajusta el tamaño según tus necesidades */
+  height: 24px;
+}
+
+body.dark-theme .icon {
+  filter: brightness(0) invert(1); /* Ajusta el brillo e inversión para el tema oscuro */
+}
+
+/* BUTTONS */
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+  background: transparent;
+  outline: none;
+}
+
+.btn-color-1,
+.btn-color-2 {
+  border: var(--button-border-color) 0.1rem solid;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+  cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2 {
+  background: var(--button-bg-color);
+  color: var(--button-text-color);
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+  background: var(--button-hover-bg-color);
+  color: var(--button-hover-text-color);
+}
+
+.btn-color-2 {
+  background: none;
+}
+
+.btn-container {
+  gap: 1rem;
+}
+
+/* ABOUT SECTION */
+#about {
+  position: relative;
+}
+
+.about-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.about-details-container {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-containers,
+.about-details-container {
+  display: flex;
+}
+
+.about-pic {
+  border-radius: 2rem;
+}
+
+.arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: 2.5rem;
+}
+
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+}
+
+.section-container {
+  gap: 4rem;
+  height: 80%;
+}
+
+/* EXPERIENCE SECTION */
+#experience {
+  position: relative;
+}
+
+.experience-sub-title {
+  color: whitesmoke;
+  font-weight: 800;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.experience-details-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.article-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+article {
+  display: flex;
+  align-items: center;
+  width: 15rem; /* Ancho fijo para todos los artículos */
+  height: 4rem; /* Altura fija para todos los artículos */
+  gap: 0.5rem; /* Espacio entre el icono y el texto */
+  margin: 0 auto; /* Centra los artículos si es necesario */
+  box-sizing: border-box; /* Incluye padding y border en el tamaño del artículo */
+}
+
+article div {
+  display: flex;
+  flex-direction: column;
+}
+
+article .icon {
+  cursor: default;
+}
+
+/* PROJECTS SECTION */
+#projects {
+  position: relative;
+}
+
+.color-container {
+  border-color: rgb(163, 163, 163);
+  background: rgb(250, 250, 250);
+}
+
+.project-img {
+  border-radius: 2rem;
+  width: 90%;
+  height: 90%;
+}
+
+.project-title {
+  margin: 1rem;
+  color: black;
+}
+
+body.dark-theme .project-title {
+  color: #ffffff; /* Color blanco para el tema oscuro */
+}
+
+.project-btn {
+  color: black;
+  border-color: rgb(163, 163, 163);
+}
+
+.project-description {
+  color: rgb(85, 85, 85); /* Color para el tema claro */
+  font-size: 0.875rem; /* Ajusta el tamaño del texto según sea necesario */
+  margin-top: 0.5rem; /* Espacio entre el título y la descripción */
+  margin-bottom: 1rem;
+}
+
+/* Ajustes para el tema oscuro */
+body.dark-theme .project-description {
+  color: #cccccc; /* Color gris claro para el tema oscuro */
+}
+
+/* CONTACT */
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  background: (250, 250, 250);
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.contact-info-container p {
+  font-size: larger;
+}
+
+.contact-icon {
+  cursor: default;
+}
+
+.email-icon {
+  height: 2.5rem;
+}
+
+/* FOOTER SECTION */
+footer {
+  height: 26vh;
+  margin: 0 1rem;
+}
+
+footer p {
+  text-align: center;
+}
+
+/* Estilos para el tema oscuro */
+body, body.dark-theme {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Estilos para los enlaces en tema oscuro */
+body a, body.dark-theme a {
+  color: #ffffff;
+  text-decoration-color: #ffffff;
+}
+
+body a:hover, body.dark-theme a:hover {
+  color: #cccccc;
+  text-decoration-color: #cccccc;
+}
+
+/* Ajustes para el menú de hamburguesa en tema oscuro */
+body .hamburger-icon span, body.dark-theme .hamburger-icon span {
+  background-color: #ffffff;
+}
+
+body.light-theme .hamburger-icon span {
+  background-color: #000000;
+}
+
+/* Ajustes para los botones en tema oscuro */
+body .btn-color-1, body.dark-theme .btn-color-1,
+body .btn-color-2, body.dark-theme .btn-color-2 {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+body .btn-color-1:hover, body.dark-theme .btn-color-1:hover,
+body .btn-color-2:hover, body.dark-theme .btn-color-2:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Ajustes para los contenedores de detalles en tema oscuro */
+body .details-container, body.dark-theme .details-container {
+  background-color: #1a1a1a;
+  border-color: #333333;
+}
+
+/* Ajustes para el texto de color gris en tema oscuro */
+body p, body.dark-theme p {
+  color: #cccccc;
+}
+
+body.light-theme {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Estilos para los enlaces en tema claro */
+body.light-theme a {
+  color: #000000;
+  text-decoration-color: #000000;
+}
+
+body.light-theme a:hover {
+  color: #333333;
+  text-decoration-color: #333333;
+}
+
+/* Ajustes para los botones en tema claro */
+body.light-theme .btn-color-1,
+body.light-theme .btn-color-2 {
+  border-color: #000000;
+  color: #000000;
+}
+
+body.light-theme .btn-color-1:hover,
+body.light-theme .btn-color-2:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Ajustes para los contenedores de detalles en tema claro */
+body.light-theme .details-container {
+  background-color: #f0f0f0;
+  border-color: #cccccc;
+}
+
+/* Ajustes para el texto de color gris en tema claro */
+body.light-theme p {
+  color: #555555;
+}
+
+/* Estilos para los botones de tema y traducción */
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-buttons button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+  color: inherit;
+}
+
+#translate-toggle img,
+#translate-toggle-mobile img {
+  width: 24px; /* Ajusta el tamaño de la imagen si es necesario */
+  height: 24px;
+  vertical-align: middle; /* Alinea verticalmente la imagen en el centro del botón */
+}
+
+.nav-buttons button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Ajuste menú logo + botones*/
+#desktop-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+#desktop-nav .nav-buttons {
+  order: 2;
+}
+
+#desktop-nav .nav-links {
+  order: 3;
+}
+
+#translate-toggle img {
+  width: 24px; /* Ajusta el tamaño de la imagen */
+  height: 24px;
+  vertical-align: middle; /* Alinea verticalmente la imagen en el centro del botón */
+}
+
+
+
+/* BOTÓN GET TO KNOW ME*/
+/* Estilo del botón específico */
+#know-me-btn {
+  --glow-color: rgb(217, 176, 255);
+  --glow-spread-color: rgba(191, 123, 255, 0.781);
+  --enhanced-glow-color: rgb(231, 206, 255);
+  --btn-color: rgb(100, 61, 136);
+  border: .25em solid var(--glow-color);
+  padding: 1em 3em;
+  color: var(--glow-color);
+  font-size: 15px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em .25em var(--glow-color),
+          0 0 4em 1em var(--glow-spread-color),
+          inset 0 0 .75em .25em var(--glow-color);
+  text-shadow: 0 0 .5em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+}
+
+#know-me-btn::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(2em);
+  opacity: .7;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+}
+
+#know-me-btn:hover {
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em .25em var(--glow-color),
+          0 0 4em 2em var(--glow-spread-color),
+          inset 0 0 .75em .25em var(--glow-color);
+}
+
+#know-me-btn:active {
+  box-shadow: 0 0 0.6em .25em var(--glow-color),
+          0 0 2.5em 2em var(--glow-spread-color),
+          inset 0 0 .5em .25em var(--glow-color);
+}
+
+/* Estilo del contenedor del botón */
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem; /* Ajusta el margen según sea necesario */
+}
+

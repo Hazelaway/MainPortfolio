@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo"></div>
+      <div class="nav-buttons">
+        <button id="theme-toggle" aria-label="Toggle dark/light mode">🌓</button>
+        <button id="translate-toggle" aria-label="Translate to Spanish"><img id="flag-image" src="./assets/spanish.png" alt="Translate" /></button>
+      </div>
+      <div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#experience" data-es="Experiencia">Experience</a></li>
+          <li><a href="#projects" data-es="Proyectos">Projects</a></li>
+          <li><a href="#about" data-es="Sobre mí">About</a></li>
+          <li><a href="#contact" data-es="Contacto">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+
+    <nav id="hamburger-nav">
+      <div class="logo">Antonio Pareja</div>
+      <div class="nav-buttons">
+        <button id="theme-toggle-mobile" aria-label="Toggle dark/light mode" data-es-aria="Alternar modo oscuro/claro">🌓</button>
+        <button id="translate-toggle-mobile" aria-label="Translate to Spanish" data-es-aria="Traducir al inglés">
+          <img id="flag-image" src="./assets/spanish.png" alt="Translate" data-es-alt="Traducir" />
+        </button>
+      </div>
+      <div class="hamburger-menu">
+        <button class="hamburger-icon" onclick="toggleMenu()" aria-label="Toggle menu" data-es-aria="Alternar menú">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+        <ul class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()" data-en="About" data-es="Sobre mí">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()" data-en="Experience" data-es="Experiencia">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()" data-en="Projects" data-es="Proyectos">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()" data-en="Contact" data-es="Contacto">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/Antonio.jpg" alt="Antonio Pareja profile picture" data-es-alt="Foto de perfil de Antonio Pareja" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1" data-en="Hello, I'm" data-es="Hola, soy">Hello, I'm</p>
+        <h1 class="title">Antonio Pareja</h1>
+        <p class="section__text__p2" data-en="Frontend & Mobile Developer" data-es="Desarrollador Frontend & Móvil">Frontend & Mobile Developer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/CVE.pdf')"
+            data-en="Download CV"
+            data-es="Descargar CV"
+          >
+            Download CV
+          </button>
+          <button 
+            class="btn btn-color-1" 
+            onclick="location.href='./#contact'"
+            data-en="Contact"
+            data-es="Contacto"
+          >
+            Contact
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn profile"
+            data-es-alt="Perfil de LinkedIn"
+            class="icon"
+            onclick="window.open('https://www.linkedin.com/in/antonioparejagarcia', '_blank')"
+          />
+          <img
+            src="./assets/github.png"
+            alt="GitHub profile"
+            data-es-alt="Perfil de GitHub"
+            class="icon"
+            onclick="window.open('https://github.com/Hazelaway', '_blank')"
+          />
+        </div>
+      </div>
+    </section>
+
+
+    <section id="experience">
+      <p class="section__text__p1" data-es="Explora Mis">Explore My</p>
+      <h1 class="title" data-es="Habilidades">Skills</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title" data-es="Desarrollador Frontend">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p data-en="Experiented" data-es="Experimentado">Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p data-en="Experiented" data-es="Experimentado">Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Wordpress</h3>
+                  <p data-en="Experiented" data-es="Experimentado">Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p data-en="Basic" data-es="Básico">Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>React</h3>
+                  <p data-en="Intermediate" data-es="Intermedio">Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Github</h3>
+                  <p data-en="Intermediate" data-es="Intermedio">Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+
+
+          <div class="details-container">
+            <h2 class="experience-sub-title" data-es="Desarrollador Móvil">Mobile Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>React Native</h3>
+                  <p data-en="Basic" data-es="Básico">Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Mongo DB</h3>
+                  <p data-en="Basic" data-es="Básico">Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Android Studio</h3>
+                  <p data-en="Basic" data-es="Básico">Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>SQ Lite</h3>
+                  <p data-en="Basic" data-es="Básico">Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Java</h3>
+                  <p data-en="Basic" data-es="Básico">Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p data-en="Basic" data-es="Básico">Basic</p>
+                </div>
+              </article>
+            </div>
+          </div>
+    </section>
+
+
+
+    <!-- SECCIÓN PROYECTOS PRINCIPALES -->
+    <section id="projects">
+      <p class="section__text__p1" data-es="Explora Mis Últimos">Browse My Recent</p>
+      <h1 class="title" data-es="Proyectos Totalmente Personalizados">Fully Customized Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/cineviajero.jpg"
+                alt="Cine Viajero"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">APP Cine Viajero</h2>
+            <p class="project-description" data-es="Aplicación móvil desarrollada en React Native como proyecto final del curso, diseñada para encontrar localizaciones de escenas de tus películas favoritas.">Mobile app developed in React Native as a final course project, designed to find locations of scenes from your favorite movies.</p>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('https://github.com/Hazelaway/APP-CineViajero-', '_blank')"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('https://snack.expo.dev/@nivelaway/cine-viajero?platform=android', '_blank')"
+              >
+                Demo
+              </button>
+            </div>
+            
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/axarquiataxi.jpg"
+                alt="Axarquia Taxi"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Axarquía Taxi</h2>
+            <p class="project-description" data-es="Sitio web adaptable construido en React para la reserva de traslados con diversas condiciones y escenarios.">Responsive website built in React for booking transfers with various conditions and scenarios.</p>
+
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('https://github.com/Hazelaway/AxarquiaShuttle', '_blank')"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('https://axarquiataxi.netlify.app/', '_blank')"
+              >
+                Demo
+              </button>
+            </div>
+            
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/book.jpg"
+                alt="3D Portfolio Book"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title" data-es="Libro Portafolio 3D">3D Portfolio Book</h2>
+            <p class="project-description" data-es="Portafolio personal en forma de libro en 3D, creado completamente con HTML, CSS y JavaScript.">Personal portfolio in the form of a 3D book, created entirely with HTML, CSS, and JavaScript.</p>
+
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('https://github.com/Hazelaway/Portfolio', '_blank')"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('https://antonioparejabook.netlify.app/', '_blank')"
+              >
+                Demo
+              </button>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+        <!-- SECCIÓN PROYECTOS WORDPRESS -->
+        <section id="projects">
+          <p class="section__text__p1" data-es="Explora Mis Últimos">Browse My Recent</p>
+          <h1 class="title" data-es="Proyectos con Wordpress">Projects in Wordpress</h1>
+          <div class="experience-details-container">
+            <div class="about-containers">
+              <div class="details-container color-container">
+                <div class="article-container">
+                  <img
+                    src="./assets/waytravel.jpg"
+                    alt="Way Travel"
+                    class="project-img"
+                  />
+                </div>
+                <h2 class="experience-sub-title project-title">Way Travel</h2>
+                <p class="project-description" data-es="Web de viajes especializada en tours a España, con código React Native añadido animaciones, tarjetas, etc.">Travel website specialized in group tours to Spain, with added React Native code, animations, cards, etc.</p>
+                <div class="btn-container">
+                  <button
+                    class="btn btn-color-2 project-btn"
+                    onclick="window.open('https://github.com/Hazelaway/waytravel', '_blank')"
+                  >
+                    Github
+                  </button>
+                  <button
+                    class="btn btn-color-2 project-btn"
+                    onclick="window.open('https://waytravel.net', '_blank')"
+                  >
+                    Web
+                  </button>
+                </div>
+                
+              </div>
+              <div class="details-container color-container">
+                <div class="article-container">
+                  <img
+                    src="./assets/listasdeviajes.jpg"
+                    alt="Listas de Viajes"
+                    class="project-img"
+                  />
+                </div>
+                <h2 class="experience-sub-title project-title" data-es="Listas de Viajes">Travel Lists</h2>
+                <p class="project-description" data-es="Web que recopila las principales listas de artículos, historias y recomendaciones para viajar y que no te falte de nada.">Website that gathers top lists of articles, stories, and recommendations for travel, so you won't miss a thing.</p>
+    
+                <div class="btn-container">
+                  <button
+                    class="btn btn-color-2 project-btn"
+                    onclick="window.open('https://listasdeviajes.com/', '_blank')"
+                  >
+                    Web
+                  </button>
+                </div>
+                
+              </div>
+              <div class="details-container color-container">
+                <div class="article-container">
+                  <img
+                    src="./assets/puntoyhablarte.jpg"
+                    alt="Project 3"
+                    class="project-img"
+                  />
+                </div>
+                <h2 class="experience-sub-title project-title">Punto y Hablarte</h2>
+                <p class="project-description" data-es="Web para enseñar a hablar en público, hacer presentaciones ante audiencias personales o profesionales.">Website for training in public speaking and presentations for personal and professional development.</p>
+    
+                <div class="btn-container">
+                  <button
+                    class="btn btn-color-2 project-btn"
+                    onclick="window.open('https://puntoyhablarte.com/', '_blank')"
+                  >
+                    Web
+                  </button>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+
+    <section id="about">
+      <p class="section__text__p1" data-es="Un Poco Más">Get To Know More</p>
+      <h1 class="title" data-es="Sobre Mí">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/compass.jpg"
+            alt="Profile picture"
+            data-es-alt="Foto de perfil"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experienciablack.png"
+                alt="Experience icon"
+                data-es-alt="Icono de experiencia"
+                class="icon"
+              />
+              <h3 data-en="Experience" data-es="Experiencia">Experience</h3>
+              <p data-en="* 15+ years in travel agency and tour operator company" data-es="* Más de 15 años en agencia de viajes y operador turístico">
+                * 15+ years in travel agency and tour operator company
+              </p>
+              <p data-en="* Tourism Product Specialist" data-es="*Especialista en Producto Turístico">
+                * Tourism Product Specialist
+              </p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/educationblack.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3 data-en="Education" data-es="Educación">Education</h3>
+              <p data-en="* VET in Multiplatform Application Development (2022-2024)" data-es="* FP en Desarrollo de Aplicaciones Multiplatform (2022-2024)">
+              * VET in Multiplatform Application Development (2022-2024) 
+              <p data-en="* PG in Tourism Management and Planning (2009-2010)" data-es="* Posgrado en Dirección y Planificación del Turismo (2009-2010)">
+                * PG in Tourism Management and Planning (2009-2010)
+            </div>
+          </div>
+          <div class="text-container">
+            <p data-es="Con más de 15 años de experiencia en la industria del turismo, he centrado mi enfoque en combinar mi pasión por la tecnología con mi experiencia en gestión de viajes. Mis estudios de posgrado y una pasantía práctica en Desarrollo de Aplicaciones Multiplataforma han consolidado aún más mis habilidades. Impulsado por una gran curiosidad, siempre estoy con nuevos proyectos en mi tiempo libre para expandir continuamente mis conocimientos y habilidades."
+            data-en="With over 15 years of experience in the tourism industry, I’ve focused on merging my passion for technology with my expertise in travel management. My recent postgraduate studies and a hands-on internship in Multiplatform Application Development have further solidified my skills. Driven by an insatiable curiosity, I eagerly pursue new projects in my spare time to continually expand my knowledge and skills.">
+            With over 15 years of experience in the tourism industry, I’ve focused on merging my passion for technology with my expertise in travel management. My recent postgraduate studies and a hands-on internship in Multiplatform Application Development have further solidified my skills. Driven by an insatiable curiosity, I eagerly pursue new projects in my spare time to continually expand my knowledge and skills.
+         </p>
+          </div>
+        </div>
+      </div>
+      <div class="btn-container">
+        <button id="know-me-btn" data-en="Get to Know Me" data-es="Conóceme">
+          Get to Know Me
+        </button>
+      </div>
+    </section>
+
+
+
+    <section id="contact">
+      <p class="section__text__p1" data-es="Ponte en Contacto">Get in Touch</p>
+      <h1 class="title" data-es="Contáctame">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:antoniopareja@gmail.com">antoniopareja@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/antonioparejagarcia" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+        </div>
+        
+      </div>
+    </section>
+
+
+
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#experience" data-es="Experiencia">Experience</a></li>
+            <li><a href="#projects" data-es="Proyectos">Projects</a></li>
+            <li><a href="#about" data-es="Sobre mí">About</a></li>
+            <li><a href="#contact" data-es="Contacto">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2024 Antonio Pareja. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="traduccion.js"></script>
+  </body>
+</html>
