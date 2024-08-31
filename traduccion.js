@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const translateToggle = document.getElementById('translate-toggle');
     const themeToggleMobile = document.getElementById('theme-toggle-mobile');
     const translateToggleMobile = document.getElementById('translate-toggle-mobile');
+    console.log('Botón en traduccion.js:', themeToggle, translateToggle);
 
     // Establecer tema oscuro por defecto
     document.body.classList.add('dark-theme');
